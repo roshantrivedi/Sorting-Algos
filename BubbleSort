@@ -1,0 +1,35 @@
+//Bubble Sort
+import java.util.*;
+
+class BubbleSort {
+    
+    public static void swap(int[] arr, int x, int y)
+    {
+        int temp;
+        temp=arr[x];
+        arr[x]=arr[y];
+        arr[y]= temp;
+    }
+    
+	public static void main (String[] args) {
+		
+		int[] arr = {3, 1, -5, 22, 0, 11,-23,13,17}; 
+		
+		int i,j;
+		for(i=arr.length-1; i>0; i--)
+		{
+		    for(j=0; j<i; j++)
+		    {
+		        if(arr[j]>arr[j+1])
+		        {
+		            swap(arr,j,j+1);
+		        }
+		    }
+		}
+		for(int k=0;k<arr.length;k++)
+		{
+	        System.out.print(arr[k]+" ");
+		}
+		
+	}
+}
