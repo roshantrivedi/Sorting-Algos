@@ -1,0 +1,27 @@
+//Insertion Sort
+import java.util.*;
+
+class InsertionSort {
+    
+	public static void main (String[] args) {
+	    
+	    int[] arr = {-21, 55, 8, 3, 0 , -9, 31, 20, -99, 5};
+	    int i,j;
+	    
+	    for(i=1; i<arr.length; i++)
+	    {
+	        int newElement = arr[i];
+	        
+	        for(j=i; j>0 && arr[j-1] > newElement; j--) 
+	        {
+	           arr[j] = arr[j-1]; 
+	        }
+	        arr[j] = newElement;
+	    }
+		
+		for(int k=0;k<arr.length;k++)
+		{
+	        System.out.print(arr[k] + " ");
+		}
+	}
+}
